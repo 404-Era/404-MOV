@@ -41,17 +41,6 @@ At any given moment, 404MOV curates and locks in **strictly 3 to 5 uncompromisin
 
 ---
 
-## 🔇 Zero-Audio Constraint (100% Silent)
-
-In accordance with strict system specifications, 404MOV is guaranteed **100% silent**:
-- ❌ **NO** `<audio>` or `<video>` HTML audio elements.
-- ❌ **NO** Web Audio API (`AudioContext`, `createGain`, oscillators).
-- ❌ **NO** audio files (`.mp3`, `.wav`, `.ogg`, `.flac`).
-- ❌ **NO** volume, mute, or speaker icons anywhere in the user interface.
-- 🎥 Animated hero visuals use lightweight, silent **lossless/high-quality WebP** streams (`character_isolated.webp`) with zero audio tracks.
-
----
-
 ## 🌟 Key Features & User Experience
 
 ### 1. Unified Cyberpunk Console & Search
