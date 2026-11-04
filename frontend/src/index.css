@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cyber-yellow: #FCEE09;
+    --radar-green: #00FFA3;
+    --obsidian: #0A0D11;
+    --frosted-bg: rgba(22, 28, 36, 0.65);
+    --frosted-border: rgba(255, 255, 255, 0.12);
+    --hover-border: rgba(255, 255, 255, 0.22);
+    --text-primary: #EDEDED;
+    --text-muted: #8F9CA8;
+  }
+
+  body {
+    background-color: #080A0D;
+    color: #EDEDED;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* Subtle green ambient glow throughout site - NOT plain black */
+    background-image: 
+      radial-gradient(circle at 50% 8%, rgba(0, 255, 163, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 15% 40%, rgba(0, 255, 163, 0.035) 0%, transparent 40%),
+      radial-gradient(circle at 85% 65%, rgba(16, 231, 178, 0.04) 0%, transparent 45%),
+      radial-gradient(circle at 50% 90%, rgba(0, 255, 163, 0.03) 0%, transparent 50%),
+      radial-gradient(rgba(0, 255, 163, 0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 32px 32px;
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+}
+
+/* Subtle background grain noise overlay */
+.cyber-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Apple Liquid Glass Style Utility */
+.apple-liquid-glass {
+  background: rgba(22, 28, 36, 0.62);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.35),
+    0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Apple Frosted Pill Button */
+.apple-glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-glass-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Luminous Apple Glass Green Button */
+.apple-glass-green {
+  background: linear-gradient(180deg, rgba(0, 255, 163, 0.95) 0%, rgba(0, 220, 140, 0.9) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.65),
+    0 0 20px rgba(0, 255, 163, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.5);
+  color: #080A0D;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-glass-green:hover {
+  background: linear-gradient(180deg, rgba(16, 255, 175, 1) 0%, rgba(0, 240, 155, 0.95) 100%);
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.8),
+    0 0 28px rgba(0, 255, 163, 0.55),
+    0 10px 30px rgba(0, 0, 0, 0.6);
+  transform: translateY(-1px);
+}
+
+.apple-glass-green:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* 404MOV Logo Cyber-Glitch (Triggers 250ms glitch once every 8s; clean & stable 96.5% of time) */
+@keyframes cyberGlitch8s {
+  0%, 96% {
+    transform: none;
+    clip-path: none;
+  }
+  96.4% {
+    transform: translate(-4px, 1px) skewX(-2.5deg);
+    clip-path: polygon(0 18%, 100% 18%, 100% 42%, 0 42%);
+  }
+  97.1% {
+    transform: translate(5px, -1.5px) skewX(3deg);
+    clip-path: polygon(0 62%, 100% 62%, 100% 88%, 0 88%);
+  }
+  97.9% {
+    transform: translate(-3px, 0.5px) skewX(-1.5deg);
+    clip-path: polygon(0 8%, 100% 8%, 100% 32%, 0 32%);
+  }
+  98.7% {
+    transform: translate(2px, -1px);
+    clip-path: polygon(0 74%, 100% 74%, 100% 96%, 0 96%);
+  }
+  99.4%, 100% {
+    transform: none;
+    clip-path: none;
+  }
+}
+
+.glitch-logo {
+  animation: cyberGlitch8s 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  display: inline-block;
+  user-select: none;
+}
+
+/* Hide scrollbar for clean horizontal shelves */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Seamless Video Radial Mask (Fades rectangular borders smoothly to transparent) */
+.seamless-video-mask {
+  mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  object-fit: contain;
+}
