@@ -2,14 +2,13 @@
 
 <div align="center">
 
-### Anti-Analysis Paralysis • Cyberpunk Console • Zero-Audio Architecture
+### Anti-Analysis Paralysis • Cyberpunk Console
 
 [![GitHub Organization](https://img.shields.io/badge/Organization-404--Era-FCEE09?style=for-the-badge&logo=github&logoColor=black)](https://github.com/404-Era)
 [![React 19](https://img.shields.io/badge/React-19.3-00FFA3?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Zero-Audio](https://img.shields.io/badge/Audio-100%25%20Silent-FF0055?style=for-the-badge)](#-zero-audio-architecture-100-silent)
 
 </div>
 
@@ -18,11 +17,6 @@
 ## ⚡ Overview
 
 **404MOV** is an anti-analysis-paralysis movie recommendation platform. Instead of overwhelming users with endless rows of filler content, 404MOV locks in strictly **3 to 5 curated, high-caliber recommendations** matching the user's intent.
-
-### 🔇 Zero-Audio Architecture (100% Silent)
-- Guaranteed 100% silent across the entire platform.
-- Zero audio tags, zero Web Audio API calls, and zero audio files.
-- Hero visuals use silent, optimized WebP streams.
 
 ---
 
